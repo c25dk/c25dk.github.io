@@ -14,24 +14,44 @@
 			left
 		}
 
+		#homebutton{
+		z-index: 1;
+		font-size: 50px;
+		position: absolute;
+		margin-left: 1350px;
+		margin-top: 20px;
+		position: absolute;
+
+}
 		#personcard{ 
-			width: 200px;
-			height: 200px;
+			width: 175px;
+			height: 125px;
 			margin: 50px;
 			font-size: 30px;
+			font-family: 'Optima', sans-serif;
+			font-style: italic;
 			background-color: pink;
-			background-image: "https://www.guineapigcagesstore.com/resize/Shared/Images/Product/Standard-Grid/standard-grid.jpg?bw=1000&w=1000&bh=1000&h=1000";
 			position: absolute;
+			padding-top: 75px;
+			border: 1px solid black;
 
+		}
 
+		#personcard:hover{
+			animation-name:expand; 
+  			animation-duration:1s;
+ 			animation-iteration-count:infinite;
+  			transition:.3s ease-in-out;
+			background-color: #8fd9af;
 		}
 
 	</style>
 </head>
 <body>
 <div id="backdrop"></div>
+	<a href="index.html"> <div id="homebutton">🏠</div></a>
 <div id="personcard"> <center>
-	<a href="personcard.html"> <div> person card</div></a>
+	<a href="personcard.html"> <div> Person Card</div></a>
 </div></center>
 </body>
 </html>
