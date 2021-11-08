@@ -26,34 +26,69 @@
 	}
 
 .items{
+
 		width: 175px;
 		height: 125px;
 		border-radius: 10%;
-		margin: 50px;
 		font-size: 30px;
 		font-family: 'Optima', sans-serif;
 		font-style: italic;
+		margin-left: 100px;
+		margin-top: 100px;
 		background-color: pink;
-		position: absolute;
+		position: relative;
 		padding-top: 75px;
 		border: 3px solid purple;
+		display: inline-block;
 }
 
+
 #personcard:hover{
-		animation-name:expand; 
   		animation-duration:1s;
  		animation-iteration-count:infinite;
  		transition:.3s ease-in-out;
 		background-color: #8fd9af;
 		}
 
+
+#codesketch:hover{
+  		animation-duration:1s;
+ 		animation-iteration-count:infinite;
+ 		transition:.3s ease-in-out;
+		background-color: #8fd9af;
+		}
+
+#clickproject:hover{
+  		animation-duration:1s;
+ 		animation-iteration-count:infinite;
+ 		transition:.3s ease-in-out;
+		background-color: #8fd9af;
+		}
+
+
 	</style>
 </head>
 <body>
-<div id="backdrop"></div>
+<div id="backdrop">
 	<a href="index.html"> <div id="homebutton">🏠</div></a>
-<div class="items"id="personcard"> <center>
-	<a href="personcard.html"> <div> Person Card</div></a>
-</div></center>
+
+
+
+
+
+<a href="personcard.html"> <div class="items"id="personcard"> Person Card</div></a>
+
+<a href="codesketch1.html">
+<div class="items" id="codesketch">
+Functions</div>
+</a>
+
+
+<a href="clickproject.html"> 
+<div class="items" id="clickproject">
+<div>Click Project</div> </a>
+
+
+</div> <!-- end of backdrop -->
 </body>
 </html>
