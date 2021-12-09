@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+
+	</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var object
+
+	document.addEventListener ("keypress", function(event){
+		var square = document.createElement(
+			'div');
+		document.body.appendChild(
+			square);
+
+		if (event.key =="1") {
+			square.innerText = "hi"
+		}
+
+		else if (event.key == "2"){
+			square.innerText = "hey"
+		}
+	})
+
+</script>
+
+</body>
+</html>
