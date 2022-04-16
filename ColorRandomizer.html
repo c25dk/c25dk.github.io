@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head>
 
-</head><body style="background-color: rgb(0, 0, 0);"><h1>
-  <button id="genNew">Generate New Random Color</button>
-  <span id="color">#52ac5</span>
+</head>
+<body style="background-color: rgb(0, 0, 0);"><h1>
+  <button id="genNew">Click for a Different Color!</button>
+  <span id="color"></span>
 </h1>
 
 <style type="text/css">
 	
 h1 {
-  background: white;
 
   text-align: center;
 }
 span {
   display: block;
-
   font-weight: normal;
   font-family: monospace;
 }
@@ -27,20 +26,16 @@ span {
 
 
 <script type="text/javascript">
-	
-const setClr = () => {
-  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+	function setClr (){
+	var randomColor = Math.floor(Math.random()*16777215).toString(16);
   document.body.style.backgroundColor = "#" + randomColor;
   color.innerHTML = "#" + randomColor;
-}
+	}
+
 
 genNew.addEventListener("click", setClr);
 setClr();
 	
 </script>
 
-
-
-<div id="forest-ext-shadow-host"></div>
-<input type="color" name="">
 </body></html>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .chip{
+            left:1000px;
+            top:800px;
+         background-size:contain;
+            width:100px;
+            height:100px;
+            background-image:url(cookie.png);
+            position:absolute;
+            /*the size and how the cookie looks*/
+        }
+    </style>
+</head>
+
+<body>
+    <p>cookies eaten:</p><input id="input"></input>
+    <audio id="sound" src="Nom.mp3"> </audio>
+
+    <script type="text/javascript">
+        var Nom = document.getElementById('sound');
+    var input = document.getElementById('input');
+        var x = 0;
+
+    function createCookie() {
+        var cookie = document.createElement('div');
+        document.body.appendChild(cookie);
+        cookie.classList.add("chip");
+// function to make a cookie
+        function changePosition() {
+            cookie.style.left = 1000 * Math.random() + "px";
+            cookie.style.top = 1000 * Math.random() + "px";
+// the position of cookie is randomized
+
+        };
+
+        cookie.addEventListener("click", function() {
+            console.log("cookie");
+            cookie.classList.remove("chip");
+            Nom.play()
+            x = x + 1;
+            input.value = x;
+        })
+        // on click it'll play the sound and add 1 to the input and type in console log 'cookie'
+        setInterval(changePosition, 2000)
+        // change where it is happen every 2000 ms
+    };
+    setInterval(createCookie, 1000);
+    // change how often a cookie is created every 1000ms
+    </script>
+</body>
+
+</html>
