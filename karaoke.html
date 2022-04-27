@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	#background{
+		background-image: url(musicnotes.jpeg);
+		height: 500px;
+		width: 500px;
+	}
+
+	.text{ 
+		font-size: 50px;
+		opacity: 0%;
+		font-family: 'Optima', sans-serif;
+}
+	.space{
+		opacity: 0%;
+	}
+
+
+</style>
+	<title></title>
+</head>
+<body>
+
+<audio id="sound" src="stillintoyou.mp3"></audio>
+
+<div class="text">Cause after all this time,</div>
+<div class="space"> space </div>
+<div class="text">I'm still into you</div>
+<div class="space"> space </div>
+<div class="text">I should be over all the butterflies</div>
+<div class="space"> space </div>
+<div class="text">But I'm into you (I'm into you)</div>
+<div class="space"> space </div>
+<div class="text">And baby even on our worst nights</div>
+<div class="space"> space </div>
+<div class="text">I'm into you (I'm into you)</div>
+<div class="space"> space </div>
+<div class="text">Let 'em wonder how we got this far</div>
+<div class="space"> space </div>
+<div class="text">Cause I don't need to wonder at all</div>
+<div class="space"> space </div>
+<div class="text">Yeah after all this time, I'm still into you </div>
+
+<div id="background"></div>
+
+<script type="text/javascript">
+	
+	var song = document.getElementById('sound');
+
+	var text = document.getElementsByClassName('text')
+
+	text = Array.from(text)
+
+	document.addEventListener("click", function() {
+//for each is a funciton you can use on arrays and any function you put inside the forEach function applies to each element in teh array. The input of the forEach function refers to each element of the array//
+		text.forEach(function(elementInArray){
+			
+		elementInArray.style.opacity = "1";
+
+
+
+		})
+		song.play()
+		console.log(text)
+
+	})
+
+
+</script>
+
+
+</body>
+</html>
